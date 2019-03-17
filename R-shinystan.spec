@@ -4,31 +4,53 @@
 #
 Name     : R-shinystan
 Version  : 2.5.0
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/shinystan_2.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/shinystan_2.5.0.tar.gz
 Summary  : Interactive Visual and Numerical Diagnostics and Posterior
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-DT
+Requires: R-StanHeaders
+Requires: R-callr
 Requires: R-colourpicker
 Requires: R-dygraphs
+Requires: R-ggridges
 Requires: R-gtools
+Requires: R-inline
+Requires: R-loo
+Requires: R-matrixStats
+Requires: R-pkgbuild
+Requires: R-prettyunits
+Requires: R-ps
+Requires: R-reshape2
 Requires: R-rsconnect
+Requires: R-rstan
 Requires: R-shinyjs
 BuildRequires : R-DT
+BuildRequires : R-StanHeaders
 BuildRequires : R-bayesplot
+BuildRequires : R-callr
 BuildRequires : R-colourpicker
 BuildRequires : R-dygraphs
+BuildRequires : R-ggridges
 BuildRequires : R-gtools
+BuildRequires : R-inline
+BuildRequires : R-loo
+BuildRequires : R-matrixStats
+BuildRequires : R-pkgbuild
+BuildRequires : R-prettyunits
+BuildRequires : R-ps
+BuildRequires : R-reshape2
 BuildRequires : R-rsconnect
+BuildRequires : R-rstan
 BuildRequires : R-shiny
 BuildRequires : R-shinyjs
 BuildRequires : R-shinythemes
 BuildRequires : R-threejs
 BuildRequires : R-xtable
 BuildRequires : R-xts
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 Carlo (MCMC) diagnostics and plots and tables helpful for analyzing a
@@ -46,11 +68,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1525656678
+export SOURCE_DATE_EPOCH=1552851773
 
 %install
+export SOURCE_DATE_EPOCH=1552851773
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1525656678
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -85,8 +107,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library shinystan|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  shinystan || :
 
 
 %files
@@ -222,3 +243,22 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/shinystan/help/shinystan.rdx
 /usr/lib64/R/library/shinystan/html/00Index.html
 /usr/lib64/R/library/shinystan/html/R.css
+/usr/lib64/R/library/shinystan/tests/testthat.R
+/usr/lib64/R/library/shinystan/tests/testthat/data_for_retrieve_tests.R
+/usr/lib64/R/library/shinystan/tests/testthat/old_sso_for_tests.rda
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_accept_stat.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_divergent.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_ess.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_mcse.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_mean.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_median.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_quantiles.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_rhat.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_sd.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_stepsize.rds
+/usr/lib64/R/library/shinystan/tests/testthat/retrieve_sso_answers/test_answer_treedepth.rds
+/usr/lib64/R/library/shinystan/tests/testthat/stanfit2_for_tests.rda
+/usr/lib64/R/library/shinystan/tests/testthat/test_creating_sso.R
+/usr/lib64/R/library/shinystan/tests/testthat/test_deploy_shinystan.R
+/usr/lib64/R/library/shinystan/tests/testthat/test_misc.R
+/usr/lib64/R/library/shinystan/tests/testthat/test_using_sso.R
