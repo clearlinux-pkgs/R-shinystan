@@ -1,11 +1,14 @@
 2.5.0
 R-DT
 R-StanHeaders
+R-base64enc
 R-callr
 R-colourpicker
+R-crosstalk
 R-dygraphs
 R-ggridges
 R-gtools
+R-igraph
 R-inline
 R-loo
 R-matrixStats

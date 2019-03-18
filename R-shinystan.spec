@@ -4,37 +4,26 @@
 #
 Name     : R-shinystan
 Version  : 2.5.0
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/shinystan_2.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/shinystan_2.5.0.tar.gz
 Summary  : Interactive Visual and Numerical Diagnostics and Posterior
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-DT
-Requires: R-StanHeaders
-Requires: R-callr
-Requires: R-colourpicker
-Requires: R-dygraphs
-Requires: R-ggridges
-Requires: R-gtools
-Requires: R-inline
-Requires: R-loo
-Requires: R-matrixStats
-Requires: R-pkgbuild
-Requires: R-prettyunits
-Requires: R-ps
-Requires: R-reshape2
-Requires: R-rsconnect
-Requires: R-rstan
-Requires: R-shinyjs
+Requires: R-base64enc
+Requires: R-crosstalk
+Requires: R-igraph
 BuildRequires : R-DT
 BuildRequires : R-StanHeaders
+BuildRequires : R-base64enc
 BuildRequires : R-bayesplot
 BuildRequires : R-callr
 BuildRequires : R-colourpicker
+BuildRequires : R-crosstalk
 BuildRequires : R-dygraphs
 BuildRequires : R-ggridges
 BuildRequires : R-gtools
+BuildRequires : R-igraph
 BuildRequires : R-inline
 BuildRequires : R-loo
 BuildRequires : R-matrixStats
@@ -68,10 +57,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552851773
+export SOURCE_DATE_EPOCH=1552887233
 
 %install
-export SOURCE_DATE_EPOCH=1552851773
+export SOURCE_DATE_EPOCH=1552887233
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
