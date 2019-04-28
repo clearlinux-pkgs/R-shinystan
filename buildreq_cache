@@ -21,7 +21,9 @@ R-pkgbuild
 R-pkgconfig
 R-plyr
 R-prettyunits
+R-processx
 R-ps
+R-purrr
 R-reshape2
 R-rsconnect
 R-rstan
