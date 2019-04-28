@@ -8,6 +8,7 @@ R-crosstalk
 R-dplyr
 R-dygraphs
 R-ggridges
+R-glue
 R-gtable
 R-gtools
 R-igraph
@@ -30,4 +31,5 @@ R-rstan
 R-scales
 R-shinyjs
 R-stringi
+R-tidyselect
 R-zoo

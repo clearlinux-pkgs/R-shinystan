@@ -4,14 +4,14 @@
 #
 Name     : R-shinystan
 Version  : 2.5.0
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/shinystan_2.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/shinystan_2.5.0.tar.gz
 Summary  : Interactive Visual and Numerical Diagnostics and Posterior
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-processx
-Requires: R-purrr
+Requires: R-glue
+Requires: R-tidyselect
 BuildRequires : R-DT
 BuildRequires : R-StanHeaders
 BuildRequires : R-base64enc
@@ -22,6 +22,7 @@ BuildRequires : R-crosstalk
 BuildRequires : R-dplyr
 BuildRequires : R-dygraphs
 BuildRequires : R-ggridges
+BuildRequires : R-glue
 BuildRequires : R-gtable
 BuildRequires : R-gtools
 BuildRequires : R-igraph
@@ -47,6 +48,7 @@ BuildRequires : R-shinyjs
 BuildRequires : R-shinythemes
 BuildRequires : R-stringi
 BuildRequires : R-threejs
+BuildRequires : R-tidyselect
 BuildRequires : R-xtable
 BuildRequires : R-xts
 BuildRequires : R-zoo
@@ -68,10 +70,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556469138
+export SOURCE_DATE_EPOCH=1556483020
 
 %install
-export SOURCE_DATE_EPOCH=1556469138
+export SOURCE_DATE_EPOCH=1556483020
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
