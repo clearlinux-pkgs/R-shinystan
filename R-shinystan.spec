@@ -4,7 +4,7 @@
 #
 Name     : R-shinystan
 Version  : 2.6.0
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/shinystan_2.6.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/shinystan_2.6.0.tar.gz
 Summary  : Interactive Visual and Numerical Diagnostics and Posterior
